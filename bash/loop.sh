@@ -5,5 +5,5 @@ VHOSTS_PATH=/etc/apache2/sites-available/*.conf
 
 for FILENAME in ${VHOSTS_PATH}
 do
-    echo $FILENAME
+    echo ${FILENAME:29:-5}
 done
