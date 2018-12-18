@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>While Loop</title>
+  </head>
+  <body>
+    
+	<script>
+        var items = [
+        'for',
+        //do something while another thing is happening
+        'do...while',
+        //designed for an array
+        'for...in',
+        //designed for an object
+        'for...of'
+        ];
+
+        var msg = 'JavaScript supports ' + items.length + ' types of loop.';
+        var i=0;
+        var li = '';
+        while(i<items.length){
+        li += `<li>${items[i]}</li>`;
+        i++;
+        // To help with testing and show functionality through F12
+        console.log(li);
+    }
+
+    msg += `<ul>${li}</ul>`;
+
+    document.write(msg);
+	</script>
+  </body>
+</html>

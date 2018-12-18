@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Switch Statement </title>
+  </head>
+  <body>	
+    <script>
+
+        var color = null;
+        var GET = {};
+
+        //parse the GET params out of the URL
+        if(document.location.toString().indexOf('?') !== -1) {
+            var query = document.location
+            .toString()
+            // get the query string
+            .replace(/^.*?\?/, '')
+            // and remove any existing hash string (thanks, @vrijdenker)
+            .replace(/#.*$/, '')
+            .split('&');
+
+            for(var i=0, l=query.length; i<l; i++) {
+            var aux = decodeURIComponent(query[i]).split('=');
+            GET[aux[0]] = aux[1];
+            }
+        }
+
+        //Check for get parameters
+        if(GET['color'] !== 'undefined'){
+            color = `#${GET['color']}`;
+        }
+
+        switch (color) {
+        case '#ff9900':
+        case '#990000':
+        label = 'red';
+        break;
+        
+        case '#00ff00':
+        case '#009900':
+        label = 'green';
+        break;
+        
+        case '#0000ff':
+        case '#000099':
+        label = 'blue';
+        break;
+        
+        default:
+        label = 'Sorry, I cannot determine the color';
+        break;
+        }
+        document.write(`<div style="color:${color}">The color is ${label}.</div>`);
+    </script>   	
+  </body>
+</html>

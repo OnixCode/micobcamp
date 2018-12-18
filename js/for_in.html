@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>For In Loop</title>
+  </head>
+  <body>
+    
+	<script>
+        var items = {
+        0:'for',
+        //do something while another thing is happening
+        1:'do...while',
+        //designed for an array
+        2:'for...in',
+        //designed for an object
+        3:'for...of'
+        };
+
+        var msg = 'JavaScript supports ' + Object.keys(items).length + ' types of loop.';
+
+        var li = '';
+        for(var item in items){
+        li += `<li>${items[item]}</li>`;
+        // To help with testing and show functionality through F12
+        console.log(li);
+        }
+
+        msg += `<ul>${li}</ul>`;
+
+        document.write(msg);
+	</script>
+  </body>
+</html>

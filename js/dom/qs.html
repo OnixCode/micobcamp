@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Query Selectors</title>
+</head>
+
+<body>
+
+    <div id="a" class="a">Hello World</div>
+
+    <p class="b">Whatever nonsense you want to type here.</p>
+
+    <blockquote class="a b">It's a nice day!</blockquote>
+
+    <blockquote>How Are You?</blockquote>
+
+    <input name="first_name">
+    <input name="last_name">
+
+    <blockquote>Who are you?</blockquote>
+
+    
+    <script>
+        //can query any DOM element and run code on it
+        //Selector returns the first match
+        var elem = document.querySelector('#a');
+        elem.style = 'color: #ff0000';
+
+        //return a live HTMLCollection (an array of matching elements)
+        //SelectorAll returns an array
+        var list = document.querySelectorAll('blockquote');
+        for(let i=0; i<list.length; i++){
+            //Go through the array and make each one blue
+            list[i].style = 'color: pink';
+        }console.log(list);
+        
+        var classList = document.querySelectorAll('.b');
+        classList[1].style = 'color: green';
+
+        var classList2 = document.querySelectorAll('.a.b');
+        classList2[0].style.fontWeight = 'bold';
+
+        var inputs = document.querySelectorAll('input[name="first_name"]');
+        inputs[0].style = 'border: 1px solid #ff0000'; 
+
+        var inputs2 = document.querySelectorAll('input[name="last_name"]');
+        inputs2[0].style = 'border: 1px solid #00ff00'; 
+
+        //Selects the first item in the array.
+        //"input[name='first_name']" is a trick to allow the search of all input items for the name, firstname
+        
+        var first = document.querySelector("input[name='first_name']");
+        first.style = 'border:1px solid purple';
+  
+    </script>
+</body>
+</html>

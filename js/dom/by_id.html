@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>By Id</title>
+</head>
+
+<body>
+
+    <div id="a" class="a">Hello World</div>
+
+    <p class="b">Whatever nonsense you want to type here.</p>
+
+    <blockquote class="a b">It's a nice day!</blockquote>
+
+    <blockquote>How Are You?</blockquote>
+
+    <input name="first_name">
+    <input name="last_name">
+
+    
+    <script>
+        //return an element object
+        var elem = document.getElementById('a');
+        elem.style = 'color: #ff0000';
+
+        //return a live HTMLCollection (an array of matching elements)
+        var list = document.getElementsByTagName('blockquote');
+        list[1].style = 'color: #000099';
+
+        var classList = document.getElementsByClassName('b');
+        classList[0].style = 'color: green';
+
+        var classList = document.getElementsByClassName('a b');
+        classList[0].style = 'font-weight: bold';
+
+        var inputs = document.getElementsByName('first_name');
+        inputs[0].style = 'border: 1px solid #ff0000'; 
+
+        var inputs2 = document.getElementsByName('last_name');
+        inputs2[0].style = 'border: 1px solid #00ff00'; 
+
+        console.log(classList);
+        
+    </script>
+</body>
+</html>
