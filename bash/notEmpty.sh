@@ -8,9 +8,7 @@ do
     then
         STRING="Hello"
     else
-        STRING="$STRING World"
+        STRING="${STRING} World"
     fi
     echo "$STRING"
 done
-
-echo "$STRING"
