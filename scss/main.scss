@@ -1,0 +1,16 @@
+/* Variables */
+$primary-font-stack: "Helvetica Neue",Helvetica,Arial,sans-serif;
+$primary-color: #1f5;
+
+/*Universal Settings*/
+*{
+    box-sizing: border-box;
+}
+body{
+    font: 100% $primary-font-stack;
+    color: $primary-color;
+
+    margin: 0 auto;
+    padding: 0;
+    width: 1170px;
+}
