@@ -1,0 +1,13 @@
+/* Variables */
+/*Universal Settings*/
+* {
+  box-sizing: border-box; }
+
+body {
+  font: 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #1f5;
+  margin: 0 auto;
+  padding: 0;
+  width: 1170px; }
+
+/*# sourceMappingURL=main.css.map */
