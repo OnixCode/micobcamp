@@ -1,6 +1,19 @@
 /* Variables */
 $primary-font-stack: "Helvetica Neue",Helvetica,Arial,sans-serif;
-$primary-color: #1f5;
+$primary-color: #000;
+$success-color: #3c763d;
+$warning-color: #8a6d3b;
+$error-color: #a94442;
+
+/* Mixins */
+/* Clear Floats */
+@mixin clearfix() {
+    &:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
 
 /*Universal Settings*/
 *{
@@ -14,3 +27,54 @@ body{
     padding: 0;
     width: 1170px;
 }
+
+/* Utility Classes*/
+.clearfix{
+    @include clearfix();
+}
+.col{
+    float: left;
+    width: 25%;
+    padding: .5rem;
+
+    /* Debug */
+    border: 1px solid #990000;
+    background: #fff;
+}
+.message{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    color: #333;
+}
+.message-success{
+    @extend .message;
+    border-color: $success-color;
+    color: $success-color;
+}
+.message-error{
+    @extend .message;
+    border-color: $error-color;
+    color: $error-color;
+}
+.message-warning{
+    @extend .message;
+    border-color: $warning-color;
+    color: $warning-color;
+}
+
+/* Rows */ 
+.row{
+    @include clearfix();
+}
+.text-success{
+    color: $success-color;
+}
+.text-error{
+    color: $error-color;
+}
+.text-warning{
+    color: $warning-color;
+}
+
+
