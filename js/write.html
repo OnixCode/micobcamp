@@ -4,11 +4,12 @@
       <title>Using the development console.</title>
   </head>
   <body>
-    <div id="MyText"></div>
+    <div id="MyText">Hello World</div>
+    <div id="NewText"></div>
     <p>Using the development console. Press [f12] and click the console tab.</p>  
 		<script>
-      var msg = 'Hello World';
-      document.getElementById('MyText').innerHTML = msg;
+      var msg = document.getElementById('MyText').innerHTML;
+      document.getElementById('NewText').innerHTML = msg;
 		</script>
   </body>
 </html>
